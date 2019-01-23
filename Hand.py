@@ -15,17 +15,17 @@ class Hand(object):
     def drawATile(self, tile):
         # need to ensure input is a tile?
         self.all_tiles.append(tile)
-        tile['location'] = self.player_loc
+        tile.location = self.player_loc
     
     def sortHand(self):
         # self.all_tiles.sort(key = lambda t: t['suit'].value)
         # self.all_tiles.sort(key = lambda t: t['num'])
         # self.tiles.sort(key = lambda t: t['suit'].value)
         # self.tiles.sort(key = lambda t: t['num'])
-        self.all_tiles.sort(key = lambda t: t.suit.value)
         self.all_tiles.sort(key = lambda t: t.num)
-        self.tiles.sort(key = lambda t: t.suit.value)
+        self.all_tiles.sort(key = lambda t: t.suit.value)
         self.tiles.sort(key = lambda t: t.num)
+        self.tiles.sort(key = lambda t: t.suit.value)
 
     def discardATile(self, tile_to_discard):
         if not self.flag14tiles or len(self.all_tiles) <= 13:

@@ -61,10 +61,13 @@ def setAllTilesLocToWall():
         t.location = Location.wall
 
 
-t42 = Tile(42)
-print(t42)
+if __name__ == '__main__':
+    print('TESTING in Tile.py')
+    t42 = Tile(42)
+    print(t42)
 
-t42.id
-t42.suit
-t42.num
-t42.location
+    t42.id
+    t42.suit
+    t42.num
+    t42.location
+    print('END TESTING in Tile.py')
